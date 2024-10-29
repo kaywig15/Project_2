@@ -1,7 +1,6 @@
 async function displayData() {
   const giphyApi = "H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK";
-  const endPointGet =
-    "https://api.giphy.com/v1/gifs/search?api_key=H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK&q=yes&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clip";
+  const endPointGet = `https://api.giphy.com/v1/gifs/search?api_key=H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK&q=${""}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clip`;
 
   try {
     const response = await fetch(endPointGet);
@@ -14,7 +13,6 @@ async function displayData() {
       newImage.className = "giphy-img";
 
       let section_image = document.getElementById("section_image");
-      console.log(section_image);
       section_image.appendChild(newImage);
     });
   } catch {}

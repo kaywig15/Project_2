@@ -1,27 +1,32 @@
-async function displayData() {
+async function displayData(searchTerm) {
   const giphyApi = "H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK";
-  const endPointGet = `https://api.giphy.com/v1/gifs/search?api_key=H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK&q=${""}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clip`;
+  const endPointGet = `https://api.giphy.com/v1/gifs/search?api_key=H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK&q=${searchTerm}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clip`;
 
   try {
     const response = await fetch(endPointGet);
-    console.log(response);
+    if (!response.ok) {
+      throw new Error("Network response was not successful");
+    }
     let data = await response.json();
-    data.data.forEach((element) => {
-      let newImage = document.createElement("img");
-      newImage.src = element.images.original.url;
-      console.log(element.images.original.url);
-      newImage.className = "giphy-img";
+    let section_image = document.getElementById("section_image");
+    section_image.innerHTML = "";
 
-      let section_image = document.getElementById("section_image");
+    data.data.forEach((element) => {
+      const newImage = document.createElement("img");
+      newImage.src = element.images.original.url;
+      newImage.className = "giphy-img";
       section_image.appendChild(newImage);
     });
-  } catch {}
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
-displayData();
-/*
-  fetch(giphyApi).then((response) => {
-    if (!response.ok) throw new Error("Network Response Error");
-    return response.json();
-  });
-}
-*/
+
+document.getElementById("searchButton").addEventListener("click", () => {
+  const searchTerm = document.getElementById("searchTerm").value;
+  if (searchTerm) {
+    displayData(searchTerm);
+  } else {
+    alert("Please enter a search term");
+  }
+});

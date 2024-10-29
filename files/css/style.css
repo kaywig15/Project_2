@@ -1,3 +1,19 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 .heading {
   display: block;
   text-align: center;
@@ -6,6 +22,7 @@
 .submitButton {
   display: block;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .bungee-spice-regular {
@@ -14,5 +31,32 @@
   font-style: normal;
 }
 
+.header_image {
+  height: 100px;
+}
+
+.navbar {
+  background-color: black;
+}
+
 #section_image {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.giphy-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.social {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.social li {
+  margin-right: 10px;
 }

@@ -20,16 +20,100 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header></header>
-    <main>
-      <h1 class="heading bungee-spice-regular">GIPHY SEARCH</h1>
-      <section class="submitButton bungee-spice-regular">
-        <input type="text" id="searchTerm" placeholder="Search for images..." />
-        <button id="searchButton" type="submit">Search</button>
-      </section>
-      <section id="section_image"></section>
-    </main>
-    <footer></footer>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              class="header_image"
+              src="./pictures/pumpkin.png"
+              alt="pumpkin logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <main>
+        <h1 class="heading bungee-spice-regular">GIPHY SEARCH</h1>
+        <section class="submitButton bungee-spice-regular">
+          <input
+            type="text"
+            id="searchTerm"
+            placeholder="Search for images..."
+          />
+          <button id="searchButton" type="submit">Search</button>
+        </section>
+        <section id="section_image"></section>
+      </main>
+      <footer class="container-fluid">
+        <div class="row">
+          <div class="col col-4">
+            <p>&copy;Pancake Productions</p>
+          </div>
+          <div class="col col-4">
+            <p>San Diego, CA</p>
+          </div>
+          <div class="col col-4">
+            <div class="navbar-text">
+              <ul class="social">
+                <li>
+                  <a href="https://www.facebook.com/orwig1">
+                    <img
+                      class="icon"
+                      src="./pictures/facebook.svg"
+                      alt="Facebook"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/kyle.m.orwig/">
+                    <img
+                      class="icon"
+                      src="./pictures/instagram.svg"
+                      alt="Instagram"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/kaywig15">
+                    <img
+                      class="icon"
+                      src="./pictures/github.svg"
+                      alt="GitHub"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

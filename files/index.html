@@ -16,13 +16,19 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=New+Amsterdam&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
     <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="container-fluid bungee-spice-regular">
       <nav class="navbar navbar-expand-sm bg-body-tertiary">
-        <div class="container-fluid col-4">
+        <div class="container-fluid header-content">
           <a class="navbar-brand" href="./index.html">
             <img
               class="header_image"
@@ -54,28 +60,17 @@
               </li>
             </ul>
           </div>
-          <div>
-            <a class="navbar-brand" href="./index.html">
-              <img
-                class="header_image"
-                src="./pictures/pumpkin.png"
-                alt="pumpkin logo"
-              />
-            </a>
-          </div>
         </div>
       </nav>
     </header>
     <div class="wrapper">
       <main>
-        <h1 class="heading bungee-spice-regular">GIPHY SEARCH</h1>
+        <h1 class="heading rubik-wet-paint-regular">GIPHY SEARCH</h1>
         <section class="submitButton bungee-spice-regular">
-          <input
-            type="text"
-            id="searchTerm"
-            placeholder="Search for images..."
-          />
-          <button id="searchButton" type="submit">Search</button>
+          <input type="text" id="searchTerm" placeholder="Search for GIFs..." />
+          <button type="button" id="searchButton" class="btn btn-light">
+            Search
+          </button>
         </section>
         <section id="section_image"></section>
       </main>

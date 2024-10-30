@@ -1,6 +1,6 @@
 async function displayData(searchTerm) {
   const giphyApi = "H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK";
-  const endPointGet = `https://api.giphy.com/v1/gifs/search?api_key=H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK&q=${searchTerm}&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clip`;
+  const endPointGet = `https://api.giphy.com/v1/gifs/search?api_key=H2Jye2cTqSbWrfpwWSoSG626gMWnfGSK&q=${searchTerm}&limit=50&offset=0&rating=pg-13&lang=en&bundle=messaging_non_clips`;
 
   try {
     const response = await fetch(endPointGet);

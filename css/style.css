@@ -6,6 +6,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .rubik-wet-paint-regular {
@@ -65,6 +66,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
+  overflow: hidden;
 }
 
 .giphy-img {
@@ -73,6 +75,8 @@ main {
   border-radius: 8px;
   margin: 10px;
   border: 2px solid #ff6347;
+  display: block;
+  box-sizing: border-box;
 }
 
 .social {

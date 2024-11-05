@@ -18,7 +18,7 @@ async function displayData(searchTerm) {
       section_image.appendChild(newImage);
     });
   } catch (error) {
-    console.error("Error fetching data:", error);
+    throw new Error("Error retrieving data");
   }
 }
 
